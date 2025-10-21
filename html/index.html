@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body {
+            font-family: sans-serif; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh; 
+            background-color: #f4f4f4; 
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px; 
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sınav</h1>
+    
+    <form> 
+        
+        <fieldset>
+            <legend>Kişisel Bilgiler</legend>
+            
+            <div>
+                <label for="isim">Adınız:</label>
+                <input type="text" id="isim" name="isim" required>
+            </div>
+            
+            <div>
+                <label for="sisim">Soyadınız:</label>
+                <input type="text" id="sisim" name="sisim" required>
+            </div>
+
+            <div>
+                <label for="tarih">Sınavı cevaplandırdığınız tarihi girin:</label>
+                <input type="date" id="tarih" name="tarih" required>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Sorular</legend>
+
+            <div>
+                <p>1. Bilgisayarda verilerin geçici olarak saklandığı ve programların çalıştığı hızlı bellek türü hangisidir?</p>
+                <label><input type="radio" name="q1_method" value="GET" required> Cache</label>
+                <label><input type="radio" name="q1_method" value="POST"> RAM</label>
+                <label><input type="radio" name="q1_method" value="PUT"> HDD/SSD</label>
+                <label><input type="radio" name="q1_method" value="PUT"> ROM</label>
+            </div>
+
+            <div>
+                <p>2. Bilgisayar sistemlerinin temel bileşenleri genellikle hangi iki ana kategoriye ayrılır?</p>
+                <label><input type="checkbox" name="q2_node[]" value="Element"> Yazılım</label>
+                <label><input type="checkbox" name="q2_node[]" value="Text"> Veri</label>
+                <label><input type="checkbox" name="q2_node[]" value="Attribute"> Donanım</label>
+                <label><input type="checkbox" name="q2_node[]" value="Attribute"> Ağ</label>
+            </div>
+            
+            <div>
+                <label for="q3_text">3. Bilgisayar donanımını kontrol eden ve kullanıcı ile donanım arasındaki iletişimi sağlayan temel yazılım sistemi nedir?</label>
+                <input type="text" id="q3_text" name="q3_global_attr" required>
+            </div>
+            
+            <div>
+                <label for="q4_yorum">4. Çok satırlı metin girişi sağlamak için hangi etiket kullanılır?</label>
+                <textarea id="q4_yorum" name="q4_multiline_cevap" rows="4" cols="50"></textarea>
+            </div>
+
+            <div>
+                <label for="q6_color">6. Favori web renginizi seçiniz:</label>
+                <input type="color" id="q6_color" name="q6_renk" value="#000000">
+            </div>           
+
+        </fieldset>
+        
+        <div style="text-align: center;">
+            <input type="submit" value="Testi Gönder">
+            <input type="reset" value="Sıfırla">
+        </div>
+    </form>
+
+</body>
+</html>
