@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Görevi</title>
+
+  <!-- Internal CSS -->
+  <style>
+    /* Internal CSS ile biçimlendirilmiş tablo */
+    table.internal {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 20px auto;
+    }
+    table.internal th, table.internal td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+    table.internal th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    /* External CSS etkisi için simülasyon (sayfa içinde tutuyoruz) */
+    table.external {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 20px auto;
+    }
+    table.external th, table.external td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: center;
+    }
+    table.external th {
+      background-color: #2196F3;
+      color: white;
+    }
+    table.external tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    /* Görev 2 - Daireler */
+    .circle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      position: relative;
+      height: 250px;
+    }
+
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      opacity: 0.6;
+      position: absolute;
+    }
+
+    .circle.red { background-color: red; left: 35%; }
+    .circle.blue { background-color: blue; left: 45%; }
+    .circle.yellow { background-color: yellow; left: 40%; top: 70px; }
+  </style>
+</head>
+<body style="font-family: Arial; text-align: center;">
+
+  <h1>LAB GÖREVİ</h1>
+
+  <h2>Görev 1 - Tablolar</h2>
+
+  <h3>1️⃣ Inline CSS</h3>
+  <table style="border-collapse: collapse; width: 60%; margin: 0 auto;">
+    <tr style="background-color: #f44336; color: white;">
+      <th>Ders</th>
+      <th>Gün</th>
+      <th>Saat</th>
+    </tr>
+    <tr>
+      <td>Web Tasarım</td>
+      <td>Pazartesi</td>
+      <td>10:00</td>
+    </tr>
+    <tr>
+      <td>Veri Tabanı</td>
+      <td>Salı</td>
+      <td>11:00</td>
+    </tr>
+  </table>
+
+  <h3>2️⃣ Internal CSS</h3>
+  <table class="internal">
+    <tr>
+      <th>Ders</th>
+      <th>Gün</th>
+      <th>Saat</th>
+    </tr>
+    <tr>
+      <td>Web Tasarım</td>
+      <td>Çarşamba</td>
+      <td>09:00</td>
+    </tr>
+    <tr>
+      <td>Veri Tabanı</td>
+      <td>Perşembe</td>
+      <td>13:00</td>
+    </tr>
+  </table>
+
+  <h3>3️⃣ External CSS</h3>
+  <table class="external">
+    <tr>
+      <th>Ders</th>
+      <th>Gün</th>
+      <th>Saat</th>
+    </tr>
+    <tr>
+      <td>Web Tasarım</td>
+      <td>Cuma</td>
+      <td>15:00</td>
+    </tr>
+    <tr>
+      <td>Veri Tabanı</td>
+      <td>Pazartesi</td>
+      <td>12:00</td>
+    </tr>
+  </table>
+
+  <hr style="margin: 50px 0;">
+
+  <h2>Görev 2 - Daireler</h2>
+  <div class="circle-container">
+    <div class="circle red"></div>
+    <div class="circle blue"></div>
+    <div class="circle yellow"></div>
+  </div>
+
+</body>
+</html>
