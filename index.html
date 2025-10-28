@@ -1,19 +1,140 @@
-<html>
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-<style>
-code {
-  font-family: Consolas,"courier new";
-  color: crimson;
-  background-color: #f1f1f1;
-  padding: 2px;
-  font-size: 105%;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödevler</title>
+    <style>
+        /* Genel Stil */
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f7f9fb;
+            padding: 20px;
+        }
+
+        /* Tablo Stili */
+        .link-tablosu {
+            width: 100%;
+            max-width: 500px; /* Tablo genişliğini kısıtladık */
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        /* Başlık Stili */
+        .link-tablosu thead th {
+            background-color: #3498db; /* Mavi Başlık */
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.0em;
+        }
+
+        /* Veri Satırı Stili */
+        .link-tablosu tbody td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ebee;
+            vertical-align: middle;
+        }
+        
+        /* Hafta Numarası Sütunu */
+        .link-tablosu tbody td:first-child {
+            background-color: #ecf0f1; /* Açık Gri Arka Plan */
+            font-weight: bold;
+            text-align: center;
+            width: 30%; /* Sabit genişlik */
+        }
+        
+        /* Çift Numaralı Satırlar için Farklı Arka Plan */
+        .link-tablosu tbody tr:nth-child(even) {
+            background-color: #fcfdff;
+        }
+        
+        /* Link Stili */
+        .link-tablosu a {
+            color: #27ae60; /* Yeşil Link Rengi */
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link-tablosu a:hover {
+            color: #2ecc71;
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 <body>
 
-  <p>Tuna Emektar.</p>
- <p> HOŞGEN</p> 
+    <table class="link-tablosu">
+        <thead>
+            <tr>
+                <th>Hafta</th>
+                <th>Link Yükle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hafta 1</td>
+                <td><a href="https://orneklink.com/h1" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td>Hafta 2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 5</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 6</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 7</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 8</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 9</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 10</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 11</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 12</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 13</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hafta 14</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
