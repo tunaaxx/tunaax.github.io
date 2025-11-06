@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .animated-div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        #div1 {
+            background-color: #3498db;
+            animation: upAndDown 2s infinite alternate;
+        }
+
+        @keyframes upAndDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-50px); }
+        }
+        #div2 {
+            background-color: #e74c3c;
+            animation: scaleAndColor 3s infinite alternate;
+        }
+
+        @keyframes scaleAndColor {
+            0% { 
+                transform: scale(1); 
+                background-color: #e74c3c;
+            }
+            50% { 
+                transform: scale(1.5); 
+                background-color: #2ecc71; 
+            }
+            100% { 
+                transform: scale(1); 
+                background-color: #e74c3c; 
+            }
+        }
+
+        
+        #div3 {
+            background-color: #9b59b6;
+            animation: fadeInOut 2s infinite alternate;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 1; }
+            50% { opacity: 0.1; } 
+            100% { opacity: 1; }
+        }
+     
+        #div4 {
+            background-color: #f1c40f;
+            animation: leftAndRight 2.5s infinite alternate;
+        }
+
+        @keyframes leftAndRight {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(75px); } 
+        }
+        
+        #div5 {
+            background-color: #1abc9c;        
+            animation: rotateDiv 4s infinite linear;
+            border-radius: 10px;
+        }
+
+        @keyframes rotateDiv {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+    </style>
+</head>
+<body>           
+    <div id="div1" class="animated-div">1. Yukarı/Aşağı</div>
+    <div id="div2" class="animated-div">2. Büyü/Renk</div>
+    <div id="div3" class="animated-div">3. Transparan</div>
+    <div id="div4" class="animated-div">4. Sağ/Sol</div>
+    <div id="div5" class="animated-div">5. Dönen</div>
+
+</body>
+</html>
