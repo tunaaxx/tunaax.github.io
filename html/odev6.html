@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meyveleri Kes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        
+        <div id="instructions">
+            MEYVELERİ KES
+        </div>
+        
+        <div id="fruitcontainer">
+            <div id="score">
+                <span id="scoreValue">0</span>
+            </div>
+            
+            <div id="trialsleft"></div>
+            
+            <div id="front">
+                <img src="https://cdn-icons-png.flaticon.com/512/1625/1625048.png" alt="Fruit Logo" />
+                <br>HAZIR MISIN?
+            </div>
+            
+            <img id="fruit1" class="fruit" />
+        </div>
+        
+        <div id="startReset">
+            Oyunu Başlat
+        </div>
+        
+        <div id="gameOver"></div>
+    </div>
+
+    <audio id="slicesound">
+        <source src="https://github.com/Saumya-07/Fruit-Slicer/raw/master/audio/slicefruit.mp3" />
+        <source src="https://github.com/Saumya-07/Fruit-Slicer/raw/master/audio/slicefruit.ogg" />
+        <source src="https://github.com/Saumya-07/Fruit-Slicer/raw/master/audio/slicefruit.wav" />
+    </audio>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
