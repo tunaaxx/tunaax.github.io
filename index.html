@@ -5,136 +5,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ödevler</title>
     <style>
-        /* Genel Stil */
+        /* Modern Reset ve Temel Ayarlar */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Verdana', sans-serif;
-            background-color: #f7f9fb;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
             padding: 20px;
         }
 
-        /* Tablo Stili */
-        .link-tablosu {
+        /* Ana Konteyner */
+        .container {
             width: 100%;
-            max-width: 500px; /* Tablo genişliğini kısıtladık */
-            margin: 0 auto;
-            border-collapse: collapse;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            max-width: 700px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             overflow: hidden;
-            background-color: #ffffff;
         }
 
-        /* Başlık Stili */
-        .link-tablosu thead th {
-            background-color: #3498db; /* Mavi Başlık */
-            color: #ffffff;
-            padding: 15px;
+        /* Başlık Alanı */
+        .header {
+            background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+            padding: 30px 20px;
             text-align: center;
-            font-size: 1.0em;
+            color: white;
         }
 
-        /* Veri Satırı Stili */
-        .link-tablosu tbody td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #e9ebee;
-            vertical-align: middle;
-        }
-        
-        /* Hafta Numarası Sütunu */
-        .link-tablosu tbody td:first-child {
-            background-color: #ecf0f1; /* Açık Gri Arka Plan */
-            font-weight: bold;
-            text-align: center;
-            width: 30%; /* Sabit genişlik */
-        }
-        
-        /* Çift Numaralı Satırlar için Farklı Arka Plan */
-        .link-tablosu tbody tr:nth-child(even) {
-            background-color: #fcfdff;
-        }
-        
-        /* Link Stili */
-        .link-tablosu a {
-            color: #27ae60; /* Yeşil Link Rengi */
-            text-decoration: none;
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
             font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
-        .link-tablosu a:hover {
-            color: #2ecc71;
-            text-decoration: underline;
+        .header p {
+            margin: 5px 0 0;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        /* Tablo Stilleri */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .custom-table th, 
+        .custom-table td {
+            padding: 16px 24px;
+            text-align: left;
+        }
+
+        .custom-table th {
+            background-color: #f8f9fa;
+            color: #5f6368;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .custom-table tbody tr {
+            border-bottom: 1px solid #f1f1f1;
+            transition: background-color 0.2s;
+        }
+
+        .custom-table tbody tr:hover {
+            background-color: #fcfcfc;
+        }
+
+        .custom-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        /* Hafta Sütunu */
+        .week-col {
+            font-weight: 600;
+            color: #2c3e50;
+            width: 30%;
+        }
+
+        /* Durum ve Link Sütunu */
+        .status-col {
+            text-align: right !important; /* Butonu sağa yasla */
+        }
+
+        /* Link Butonu Tasarımı */
+        .btn-view {
+            display: inline-block;
+            background-color: #3a7bd5;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(58, 123, 213, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-view:hover {
+            background-color: #2c5fa3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(58, 123, 213, 0.3);
+        }
+
+        /* Boş Durum (Pasif) Yazısı */
+        .pending-text {
+            color: #b0b0b0;
+            font-style: italic;
+            font-size: 13px;
+            background-color: #f8f9fa;
+            padding: 6px 12px;
+            border-radius: 6px;
+            display: inline-block;
         }
 
     </style>
 </head>
 <body>
 
-    <table class="link-tablosu">
-        <thead>
-            <tr>
-                <th>Hafta</th>
-                <th>Linkler</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Hafta 1</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Hafta 2</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Hafta 3</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Hafta 4</td>
-                <td><a href="https://tunaaxx.github.io/tunaax.github.io/html/odev1.html" target="_blank">Görüntüle</a></td>
-            </tr>
-            <tr>
-                <td>Hafta 5</td>
-                <td><a href="https://tunaaxx.github.io/tunaax.github.io/html/odev2.html" target="_blank">Görüntüle</a></td>
-            </tr>
-            <tr>
-                <td>Hafta 6</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Hafta 7</td>
-                <td><a href="https://tunaaxx.github.io/tunaax.github.io/html/odev3.html" target="_blank">Görüntüle</a></td>
-            </tr>
-            <tr>
-                <td>Hafta 8</td>
-                <td><a href="https://tunaaxx.github.io/tunaax.github.io/html/odev4.html" target="_blank">Görüntüle</a></td>
-            </tr>
-            <tr>
-                <td>Hafta 9</td>
-                <td><a href="https://tunaaxx.github.io/tunaax.github.io/html/odev5.html" target="_blank">Görüntüle</a></td>
-            </tr>
-            <tr>
-                <td>Hafta 10</td>
-                <td><a href="https://tunaaxx.github.io/tunaax.github.io/html/github.html" target="_blank">Görüntüle(github)-</a><a href="https://tunaaxx.github.io/tunaax.github.io/html/odev6.html" target="_blank">Görüntüle</a></td>
-            </tr>
-            <tr>
-                <td>Hafta 11</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Hafta 12</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Hafta 13</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Hafta 14</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="header">
+            <h1>Ödev Takip Listesi</h1>
+            <p>Web Tasarımı ve Programlama</p>
+        </div>
+
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Dönem Haftası</th>
+                    <th style="text-align: right;">Durum / Bağlantı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="week-col">Hafta 1</td>
+                    <td class="status-col"><span class="pending-text">Henüz Yüklenmedi</span></td>
+                </tr>
+                <tr>
+                    <td class="week-col">Hafta 2</td>
+                    <td class="status-col"><span class="pending-text">Henüz Yüklenmedi</span></td>
+                </tr>
+                <tr>
+                    <td class="week-col">Hafta 3</td>
+                    <td class="status-col"><span class="pending-text">Henüz Yüklenmedi</span></td>
+                </tr>
+
+                <tr>
+                    <td class="week-col">Hafta 4</td>
+                    <td class="status-col">
+                        <a href="https://tunaaxx.github.io/tunaax.github.io/html/odev1.html" target="_blank" class="btn-view">Ödevi Görüntüle</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="week-col">Hafta 5</td>
+                    <td class="status-col">
+                        <a href="https://tunaaxx.github.io/tunaax.github.io/html/odev2.html" target="_blank" class="btn-view">Ödevi Görüntüle</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="week-col">Hafta 6</td>
+                    <td class="status-col"><span class="pending-text">Henüz Yüklenmedi</span></td>
+                </tr>
+
+                <tr>
+                    <td class="week-col">Hafta 7</td>
+                    <td class="status-col">
+                        <a href="https://tunaaxx.github.io/tunaax.github.io/html/odev3.html" target="_blank" class="btn-view">Ödevi Görüntüle</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="week-col">Hafta 8</td>
+                    <td class="status-col">
+                        <a href="https://tunaaxx.github.io/tunaax.github.io/html/odev4.html" target="_blank" class="btn-view">Ödevi Görüntüle</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="week-col">Hafta 9</td>
+                    <td class="status-col">
+                        <a href="https://tunaaxx.github.io/tunaax.github.io/html/odev5.html" target="_blank" class="btn-view">Ödevi Görüntüle</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="week-col">Hafta 10</td>
+                    <td class="status-col">
+                        <a href="https://tunaaxx.github.io/tunaax.github.io/html/github.html" target="_blank"class="btn-view">Ödevi Görüntüle(Github)</a><a href="https://tunaaxx.github.io/tunaax.github.io/html/odev6.html" target="_blank"class="btn-view">Ödevi Görüntüle</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="week-col">Hafta 11</td>
+                    <td class="status-col"><span class="pending-text">Henüz Yüklenmedi</span></td>
+                </tr>
+                <tr>
+                    <td class="week-col">Hafta 12</td>
+                    <td class="status-col"><span class="pending-text">Henüz Yüklenmedi</span></td>
+                </tr>
+                <tr>
+                    <td class="week-col">Hafta 13</td>
+                    <td class="status-col"><span class="pending-text">Henüz Yüklenmedi</span></td>
+                </tr>
+                <tr>
+                    <td class="week-col">Hafta 14</td>
+                    <td class="status-col"><span class="pending-text">Henüz Yüklenmedi</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>
